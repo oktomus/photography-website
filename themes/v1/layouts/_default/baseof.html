@@ -1,13 +1,23 @@
 <!doctype html>
-<html lang="{{ .Site.LanguageCode | default "en-us" }}">
+<html lang="fr">
   <head>
-    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} // {{ .Site.Title }}{{ end }}</title>
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}</title>
     <meta charset="utf-8" />
     {{ hugo.Generator }}
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="{{ .Site.Params.author }}" />
     <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Description }}{{ end }}" />
-    {{ $style := resources.Get "css/main.scss" | resources.ExecuteAsTemplate "css/main.scss" . | resources.ToCSS | resources.Minify | resources.Fingerprint -}}
+
+    {{ $options := (dict "targetPath" "style.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "node_modules/myscss")) }}
+    {{ $style := resources.Get "css/main.scss" | resources.ExecuteAsTemplate "css/main.scss" . | resources.ToCSS $options | resources.Fingerprint -}}
+    <link rel="stylesheet" href="{{ $style.Permalink }}" />
+
+    {{ $options := (dict "targetPath" "rubik.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "node_modules/myscss")) }}
+    {{ $style := resources.Get "css/rubik.scss" | resources.ExecuteAsTemplate "css/rubik.scss" . | resources.ToCSS $options | resources.Fingerprint -}}
+    <link rel="stylesheet" href="{{ $style.Permalink }}" />
+
+    {{ $options := (dict "targetPath" "karla.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "node_modules/myscss")) }}
+    {{ $style := resources.Get "css/karla.scss" | resources.ExecuteAsTemplate "css/karla.scss" . | resources.ToCSS $options | resources.Fingerprint -}}
     <link rel="stylesheet" href="{{ $style.Permalink }}" />
 
     {{ template "_internal/twitter_cards.html" . }}
@@ -16,15 +26,23 @@
   </head>
   <body>
     <header class="app-header">
-      <a href="{{ .Site.BaseURL }}"><img width="100" height="100" class="app-header-avatar" src="{{ .Site.Params.avatar | default "avatar.jpg" | relURL }}" alt="{{ .Site.Params.author | default "John Doe" }}" /></a>
-      <h1><a href="{{ .Site.BaseURL }}">{{ .Site.Params.Header }}</a></h1>
-      <p>{{ .Site.Params.description | default "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium." }}</p>
-      <div class="app-header-social">
-        {{ range .Site.Params.social }}
-          <a target="_blank" href="{{ .url }}" rel="noreferrer noopener" title="{{ .title }}">{{ partial "icon.html" (dict "ctx" $ "name" .name ) }}</a>
-        {{ end }}
+      <div class="container">
+        <nav class="navbar no-padding">
+          <div class="title">
+            <a href="{{ .Site.BaseURL }}">{{ .Site.Params.author }}</a>
+          </div>
+          <div class="menu stick-to-end">
+            <ul class="menu-content">
+              <li class="menu-item"><a href="/">Portfolio</a></li>
+              <li class="menu-item"><a href="/">Boutique</a></li>
+              <li class="menu-item"><a href="/">À Propos</a></li>
+              <li class="menu-item"><a href="/">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
       </div>
     </header>
+
     <main class="app-container">
       {{ block "main" . }}
         {{ .Content }}

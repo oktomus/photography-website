@@ -1,8 +1,7 @@
-baseURL = "https://oktomus.com/"
+baseURL = "https://kevinmasson.fr"
 languageCode = "en-us"
-title = "Titre du site"
+title = "Kevin Masson - Photographe de Paysage"
 theme = "v1"
-avatar = "static/avatar.jpg"
 disableKinds = ["taxonomyTerm", "taxonomy", "section"]
 
 [taxonomies]
@@ -11,44 +10,7 @@ disableKinds = ["taxonomyTerm", "taxonomy", "section"]
 
 [params]
   author = "Kevin Masson"
-  description = "Makes 3D softwares and photography while eating noodles."
-  header = "oktomus"
-  blogTitle = "Blog"
-
-[[params.social]]
-  name = "github"
-  url = "https://github.com/oktomus"
-  title = "Github"
-
-[[params.social]]
-  name = "twitter"
-  url = "https://twitter.com/oktomus"
-  title = "Twitter"
-
-[[params.social]]
-  name = "mail"
-  url = "mailto:hi@oktomus.com"
-  title = "hi@oktomus.com"
-
-[[params.social]]
-  name = "linkedin"
-  url = "https://www.linkedin.com/in/oktomus/"
-  title = "LinkedIn"
-
-[[params.social]]
-  name = "instagram"
-  url = "https://www.instagram.com/oktomus/"
-  title = "Instagram"
-
-[[params.social]]
-  name = "500px"
-  url = "https://500px.com/oktomus"
-  title = "500px"
-
-[[params.social]]
-  name = "flickr"
-  url = "https://www.flickr.com/photos/kevinmasson/"
-  title = "Flickr"
+  description = "Photographe amateur basé à Strasbourg."
 
 [markup.goldmark.renderer]
 unsafe= true

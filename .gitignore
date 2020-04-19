@@ -1,4 +1,5 @@
 /resources
+themes/*/resources
 
 /build
 /public
