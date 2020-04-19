@@ -6,7 +6,11 @@ set -e
 printf "\033[0;32mDeploying updates to GitHub...\033[0m\n"
 
 # Build the project.
-hugo -v --debug # if using a theme, replace with `hugo -t <YOURTHEME>`
+if hash rez 2>/dev/null; then
+	rez-env hugo -- hugo -v --debug
+else
+	hugo -v --debug
+fi
 
 # Go To Public folder
 cd public
@@ -22,4 +26,4 @@ fi
 git commit -m "$msg"
 
 # Push source and build repos.
-git push origin master
+git push origin gh-pages
