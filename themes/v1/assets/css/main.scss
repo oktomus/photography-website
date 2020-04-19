@@ -57,6 +57,10 @@ body {
     justify-content: flex-end !important;
 }
 
+.text-center {
+    text-align: center;
+}
+
 //
 // Header.
 //
@@ -135,4 +139,17 @@ body {
     }
 }
 
+//
+// Footer
+//
 
+.app-footer {
+
+    .social-links {
+        a {
+            padding: 0.5rem;
+            color: #666;
+        }
+    }
+
+}

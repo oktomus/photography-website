@@ -14,3 +14,28 @@ disableKinds = ["taxonomyTerm", "taxonomy", "section"]
 
 [markup.goldmark.renderer]
 unsafe= true
+
+[[params.social]]
+  name = "twitter"
+  url = "https://twitter.com/oktomus"
+  title = "Twitter"
+
+[[params.social]]
+  name = "mail"
+  url = "mailto:contact.kevinmasson@gmail.com"
+  title = "contact.kevinmasson@gmail.com"
+
+[[params.social]]
+  name = "instagram"
+  url = "https://www.instagram.com/oktomus/"
+  title = "Instagram"
+
+[[params.social]]
+  name = "500px"
+  url = "https://500px.com/oktomus"
+  title = "500px"
+
+[[params.social]]
+  name = "flickr"
+  url = "https://www.flickr.com/photos/kevinmasson/"
+  title = "Flickr"
