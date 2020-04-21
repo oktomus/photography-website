@@ -19,14 +19,14 @@
     {{ $options := (dict "targetPath" "karla.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "node_modules/myscss")) }}
     {{ $style := resources.Get "css/karla.scss" | resources.ExecuteAsTemplate "css/karla.scss" . | resources.ToCSS $options | resources.Fingerprint -}}
     <link rel="stylesheet" href="{{ $style.Permalink }}" />
-
-    {{ template "_internal/twitter_cards.html" . }}
-    {{ template "_internal/opengraph.html" . }}
-
+    
     {{ $style := resources.Get "thirdparties/photoswipe/photoswipe.css" | resources.Fingerprint -}}
     <link rel="stylesheet" href="{{ $style.Permalink }}"> 
     {{ $style := resources.Get "thirdparties/photoswipe/default-skin/default-skin.css" | resources.Fingerprint -}}
     <link rel="stylesheet" href="{{ $style.Permalink }}"> 
+    
+      {{ template "_internal/twitter_cards.html" . }}
+      {{ template "_internal/opengraph.html" . }}
 
     <!-- IE8 does not support HTML5 <figure> and <figcaption> -->
     <!--[if lt IE 9]>
@@ -61,27 +61,27 @@
                 <a class="thumbnail" href="/portfolio/tree_big.jpg" itemprop="contentUrl" data-size="1920x1440">
                     <img src="/portfolio/tree.jpg" itemprop="thumbnail" alt="Image description" />
                 </a>
-                <figcaption class="caption" itemprop="caption description">Un arbre!</figcaption>
+                <figcaption class="caption" itemprop="caption description">Vosges</figcaption>
             </figure>
             <figure class="col-3 item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                <a class="thumbnail" href="/portfolio/tree_big.jpg" itemprop="contentUrl" data-size="1920x1440">
-                    <img src="/portfolio/tree.jpg" itemprop="thumbnail" alt="Image description" />
+                <a class="thumbnail" href="/portfolio/bay_big.jpg" itemprop="contentUrl" data-size="1920x1080">
+                    <img src="/portfolio/bay.jpg" itemprop="thumbnail" alt="Image description" />
                 </a>
-                <figcaption class="caption" itemprop="caption description">Un arbre!</figcaption>
+                <figcaption class="caption" itemprop="caption description"></figcaption>
             </figure>
             <figure class="col-3 item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                <a class="thumbnail" href="/portfolio/tree_big.jpg" itemprop="contentUrl" data-size="1920x1440">
-                    <img src="/portfolio/tree.jpg" itemprop="thumbnail" alt="Image description" />
+                <a class="thumbnail" href="/portfolio/forest_big.jpg" itemprop="contentUrl" data-size="1922x1281">
+                    <img src="/portfolio/forest.jpg" itemprop="thumbnail" alt="Image description" />
                 </a>
-                <figcaption class="caption" itemprop="caption description">Un arbre!</figcaption>
+                <figcaption class="caption" itemprop="caption description">Fôret fantastique, Vosges</figcaption>
             </figure>
           </div>
           <div class="row flex-grid">
             <figure class="col-3 item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                <a class="thumbnail" href="/portfolio/tree_big.jpg" itemprop="contentUrl" data-size="1920x1440">
-                    <img src="/portfolio/tree.jpg" itemprop="thumbnail" alt="Image description" />
+                <a class="thumbnail" href="/portfolio/frost_big.jpg" itemprop="contentUrl" data-size="1920x1440">
+                    <img src="/portfolio/frost.jpg" itemprop="thumbnail" alt="Image description" />
                 </a>
-                <figcaption class="caption" itemprop="caption description">Un arbre!</figcaption>
+                <figcaption class="caption" itemprop="caption description"></figcaption>
             </figure>
           </div>
         </div>
@@ -148,7 +148,7 @@
                 </button>
 
                 <div class="pswp__caption">
-                    <div class="pswp__caption__center"></div>
+                    <div class="pswp__caption__center" style="text-align: center;"></div>
                 </div>
             </div>
         </div>

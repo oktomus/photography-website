@@ -217,30 +217,3 @@ body {
         }
     }
 }
-
-//
-// Gallery
-//
-
-.gallerya {
-    margin: 20px 0;
-}
-.gallerya .slide-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-.gallerya figure {
-    flex-grow: 1;
-    margin: 5px;
-    float: left;
-}
-.gallerya figure a, .gallerya figure img {
-    display: block;
-}
-.gallerya figure img {
-    width: 100%;
-}
-.gallerya figcaption {
-    display: none;
-}
