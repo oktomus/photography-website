@@ -25,8 +25,8 @@
     {{ $style := resources.Get "thirdparties/photoswipe/default-skin/default-skin.css" | resources.Fingerprint -}}
     <link rel="stylesheet" href="{{ $style.Permalink }}"> 
     
-      {{ template "_internal/twitter_cards.html" . }}
-      {{ template "_internal/opengraph.html" . }}
+    {{ template "_internal/twitter_cards.html" . }}
+    {{ template "_internal/opengraph.html" . }}
 
     <!-- IE8 does not support HTML5 <figure> and <figcaption> -->
     <!--[if lt IE 9]>
