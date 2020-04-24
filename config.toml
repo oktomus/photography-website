@@ -11,6 +11,7 @@ disableKinds = ["taxonomyTerm", "taxonomy", "section"]
 [params]
   author = "Kevin Masson"
   description = "Photographe amateur basé à Strasbourg."
+  titleSuffix = " | Kevin Masson - Photographe de Paysage"
 
 [markup.goldmark.renderer]
 unsafe= true
