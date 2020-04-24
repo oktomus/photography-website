@@ -35,23 +35,7 @@
   </head>
 
   <body>
-    <header class="app-header">
-      <div class="container">
-        <nav class="navbar no-padding">
-          <div class="title">
-            <a href="{{ .Site.BaseURL }}">{{ .Site.Params.author }}</a>
-          </div>
-          <div class="menu stick-to-end">
-            <ul class="menu-content">
-              <li class="menu-item"><a href="/portfolio">Portfolio</a></li>
-              <li class="menu-item"><a href="/">Boutique</a></li>
-              <li class="menu-item"><a href="/">À Propos</a></li>
-              <li class="menu-item"><a href="mailto:contact.kevinmasson@gmail.com">Contact</a></li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-    </header>
+    {{ partial "header.html" . }}
 
     <main class="app-container">
       {{ block "main" . }}
@@ -90,100 +74,9 @@
         </div>
       </div>
     </main>
-    
-    <footer class="app-footer">
-      <div class="container">
-        <p class="text-center"><small>© 2020 Kevin Masson</small></p>
 
-        <div class="text-center social-links">
-          {{ range .Site.Params.social }}
-            <a target="_blank" href="{{ .url }}" rel="noreferrer noopener" title="{{ .title }}">{{ partial "icon.html" (dict "ctx" $ "name" .name ) }}</a>
-          {{ end }}
-        </div>
-      </div>
-    </footer>
-
-    <!-- Root element of PhotoSwipe. Must have class pswp. -->
-    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-        <!-- Background of PhotoSwipe. 
-            It's a separate element as animating opacity is faster than rgba(). -->
-        <div class="pswp__bg"></div>
-        <!-- Slides wrapper with overflow:hidden. -->
-        <div class="pswp__scroll-wrap">
-            <!-- Container that holds slides. 
-                PhotoSwipe keeps only 3 of them in the DOM to save memory.
-                Don't modify these 3 pswp__item elements, data is added later on. -->
-            <div class="pswp__container">
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
-            </div>
-
-            <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-            <div class="pswp__ui pswp__ui--hidden">
-                <div class="pswp__top-bar">
-                    <!--  Controls are self-explanatory. Order can be changed. -->
-                    <div class="pswp__counter"></div>
-                    <button class="pswp__button pswp__button--close" title="Fermer"></button>
-                    <!--<button class="pswp__button pswp__button--share" title="Share"></button>-->
-                    <button class="pswp__button pswp__button--fs" title="Plein écran"></button>
-                    <button class="pswp__button pswp__button--zoom" title="Zoomer"></button>
-
-                    <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
-                    <!-- element will get class pswp__preloader--active when preloader is running -->
-                    <div class="pswp__preloader">
-                        <div class="pswp__preloader__icn">
-                          <div class="pswp__preloader__cut">
-                            <div class="pswp__preloader__donut"></div>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                    <div class="pswp__share-tooltip"></div> 
-                </div>
-
-                <button class="pswp__button pswp__button--arrow--left" title="Précédent">
-                </button>
-
-                <button class="pswp__button pswp__button--arrow--right" title="Suivant">
-                </button>
-
-                <div class="pswp__caption">
-                    <div class="pswp__caption__center" style="text-align: center;"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Photoswipe Core JS file -->
-    {{ $js := resources.Get "thirdparties/photoswipe/photoswipe.min.js" | resources.Fingerprint -}}
-    <script src="{{ $js.Permalink }}"></script> 
-    <!-- Photoswipe UI JS file -->
-    {{ $js := resources.Get "thirdparties/photoswipe/photoswipe-ui-default.min.js" | resources.Fingerprint -}}
-    <script src="{{ $js.Permalink }}"></script> 
-
-    <!-- Main JS file -->
-    {{ $js := resources.Get "js/app.js" | resources.Fingerprint -}}
-    <script src="{{ $js.Permalink }}"></script> 
-
-    <!-- Matomo -->
-    <!-- Anonymouse and open tracking. Data is stored in France via pulseheberg.-->
-    <script type="text/javascript">
-      var _paq = window._paq || [];
-      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-      _paq.push(['trackPageView']);
-      _paq.push(['enableLinkTracking']);
-      (function() {
-        var u="//matomo.oktomus.com/";
-        _paq.push(['setTrackerUrl', u+'matomo.php']);
-        _paq.push(['setSiteId', '1']);
-        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-      })();
-    </script>
-    <!-- End Matomo Code -->
+    {{ partial "footer.html" . }}
+    {{ partial "pswp_viewer.html" . }}
+    {{ partial "matomo.html" . }}
   </body>
 </html>
