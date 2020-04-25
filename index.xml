@@ -6,9 +6,28 @@
     <description>Recent content on Kevin Masson - Photographe de Paysage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Mon, 20 Apr 2020 20:58:12 +0200</lastBuildDate>
     
 	<atom:link href="https://kevinmasson.fr/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Portfolio</title>
+      <link>https://kevinmasson.fr/portfolio/</link>
+      <pubDate>Mon, 20 Apr 2020 20:58:12 +0200</pubDate>
+      
+      <guid>https://kevinmasson.fr/portfolio/</guid>
+      <description>Vosges  Fôret fantastique, Vosges    </description>
+    </item>
+    
+    <item>
+      <title>À Propos</title>
+      <link>https://kevinmasson.fr/about/</link>
+      <pubDate>Mon, 20 Apr 2020 20:58:12 +0200</pubDate>
+      
+      <guid>https://kevinmasson.fr/about/</guid>
+      <description>couocu</description>
+    </item>
     
   </channel>
 </rss>
