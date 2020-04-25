@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div class="container">
-  {{ if .Params.HideTitle }}
+  {{ if or (.Params.HideTitle) (.Page.Params.HideTitle) }}
   <h1 class="text-center" style="display:none;">{{ .Title }}</h1>
   {{ else }}
   <h1 class="text-center">{{ .Title }}</h1>
