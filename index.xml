@@ -12,21 +12,12 @@
     
     
     <item>
-      <title>Portfolio</title>
-      <link>https://kevinmasson.fr/portfolio/</link>
+      <title>Home</title>
+      <link>https://kevinmasson.fr/</link>
       <pubDate>Mon, 20 Apr 2020 20:58:12 +0200</pubDate>
       
-      <guid>https://kevinmasson.fr/portfolio/</guid>
-      <description>Vosges  Fôret fantastique, Vosges    </description>
-    </item>
-    
-    <item>
-      <title>À Propos</title>
-      <link>https://kevinmasson.fr/about/</link>
-      <pubDate>Mon, 20 Apr 2020 20:58:12 +0200</pubDate>
-      
-      <guid>https://kevinmasson.fr/about/</guid>
-      <description>couocu</description>
+      <guid>https://kevinmasson.fr/</guid>
+      <description> Vosges    Fôret fantastique, Vosges    </description>
     </item>
     
   </channel>
