@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Kevin Masson - Photographe de Paysage</title>
+    <title>Home on Kevin Masson - Photographe de Paysage</title>
     <link>https://kevinmasson.fr/</link>
-    <description>Recent content on Kevin Masson - Photographe de Paysage</description>
+    <description>Recent content in Home on Kevin Masson - Photographe de Paysage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 20 Apr 2020 20:58:12 +0200</lastBuildDate>
@@ -12,12 +12,21 @@
     
     
     <item>
-      <title>Home</title>
-      <link>https://kevinmasson.fr/</link>
+      <title>Portfolio</title>
+      <link>https://kevinmasson.fr/portfolio/</link>
       <pubDate>Mon, 20 Apr 2020 20:58:12 +0200</pubDate>
       
-      <guid>https://kevinmasson.fr/</guid>
+      <guid>https://kevinmasson.fr/portfolio/</guid>
       <description> Vosges      Fôret fantastique, Vosges        </description>
+    </item>
+    
+    <item>
+      <title>À Propos</title>
+      <link>https://kevinmasson.fr/about/</link>
+      <pubDate>Sat, 20 Apr 2019 20:58:12 +0200</pubDate>
+      
+      <guid>https://kevinmasson.fr/about/</guid>
+      <description>Ce site web a été réalisé avec Hugo et son code source est diponible librement sur GitHub.</description>
     </item>
     
   </channel>
