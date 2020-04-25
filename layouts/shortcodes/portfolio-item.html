@@ -1,0 +1,7 @@
+
+<figure class="col-3 item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <a class="thumbnail" href="{{ .Get `image` }}" itemprop="contentUrl" data-size="{{ .Get `resolution` }}">
+        <img src="{{ .Get `thumb` }}" itemprop="thumbnail" alt="{{ .Get `caption` }}" />
+    </a>
+    <figcaption class="caption" itemprop="caption description">{{ .Get `caption` }}</figcaption>
+</figure>

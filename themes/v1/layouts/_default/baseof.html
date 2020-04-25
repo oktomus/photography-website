@@ -41,38 +41,6 @@
       {{ block "main" . }}
         <!-- The part of the page that begins to differ between templates -->
       {{ end }}
-      <div class="container">
-        <div class="portfolio my-pswp-gallery">
-          <div class="row flex-grid">
-            <figure class="col-3 item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                <a class="thumbnail" href="/portfolio/tree_big.jpg" itemprop="contentUrl" data-size="1920x1440">
-                    <img src="/portfolio/tree.jpg" itemprop="thumbnail" alt="Image description" />
-                </a>
-                <figcaption class="caption" itemprop="caption description">Vosges</figcaption>
-            </figure>
-            <figure class="col-3 item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                <a class="thumbnail" href="/portfolio/bay_big.jpg" itemprop="contentUrl" data-size="1920x1080">
-                    <img src="/portfolio/bay.jpg" itemprop="thumbnail" alt="Image description" />
-                </a>
-                <figcaption class="caption" itemprop="caption description"></figcaption>
-            </figure>
-            <figure class="col-3 item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                <a class="thumbnail" href="/portfolio/forest_big.jpg" itemprop="contentUrl" data-size="1922x1281">
-                    <img src="/portfolio/forest.jpg" itemprop="thumbnail" alt="Image description" />
-                </a>
-                <figcaption class="caption" itemprop="caption description">Fôret fantastique, Vosges</figcaption>
-            </figure>
-          </div>
-          <div class="row flex-grid">
-            <figure class="col-3 item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                <a class="thumbnail" href="/portfolio/frost_big.jpg" itemprop="contentUrl" data-size="1920x1440">
-                    <img src="/portfolio/frost.jpg" itemprop="thumbnail" alt="Image description" />
-                </a>
-                <figcaption class="caption" itemprop="caption description"></figcaption>
-            </figure>
-          </div>
-        </div>
-      </div>
     </main>
 
     {{ partial "footer.html" . }}
